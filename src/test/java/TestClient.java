@@ -2,6 +2,7 @@ import model.HelloObject;
 import rpcCore.entity.RpcResponse;
 import rpcCore.proxy.RpcClientProxy;
 import service.HelloService;
+import service.Impl.HelloServiceImpl;
 
 /**
  * @author 86132
@@ -9,8 +10,7 @@ import service.HelloService;
  */
 public class TestClient {
     public static void main(String[] args) {
-        RpcClientProxy clientProxy = new RpcClientProxy("127.0.0.1",9000);
-        HelloService helloService = clientProxy.getProxy(HelloService.class);
+        HelloService helloService = new HelloServiceImpl();
         HelloObject object = new HelloObject(1,"hello world!");
         String res = helloService.hello(object);
         System.out.println(res);

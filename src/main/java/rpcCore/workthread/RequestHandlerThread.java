@@ -37,7 +37,7 @@ public class RequestHandlerThread extends Thread{
             String interfaceName = rpcRequest.getInterfaceName();
             Object service = registry.getService(interfaceName);
             Object result = requestHandler.handler(rpcRequest,service);
-            objectOutputStream.writeObject(RpcResponse.success(result));
+            objectOutputStream.writeObject(RpcResponse.success(result,rpcRequest.getRequestId()));
             objectOutputStream.flush();
         } catch (IOException | ClassNotFoundException e) {
             logger.error("调用或者发送时有错误发生:",e);
