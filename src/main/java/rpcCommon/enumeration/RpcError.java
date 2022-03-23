@@ -16,6 +16,8 @@ public enum RpcError {
     UNKNOWN_PACKAGE_TYPE("未知的数据包"),
     UNKNOWN_SERIALIZER("不识别的反序列化器"),
     SERVICE_INVOCATION_FAILURE("服务调用失败"),
-    RESPONSE_NOT_MATCH("没有匹配的请求");
+    RESPONSE_NOT_MATCH("没有匹配的请求"),
+    SERIALIZE_ERROR("序列化失败"),
+    DESERIALIZE_ERROR("反序列化失败");
     private String message;
 }

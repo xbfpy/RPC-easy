@@ -14,6 +14,6 @@ public class TestServer {
         ServiceRegistry registry = new DefaultServiceRegistry();
         registry.register(helloService);
         SocketRpcServer SocketRpcServer = new SocketRpcServer(registry);
-        SocketRpcServer.start(9000);
+        SocketRpcServer.start(9000,registry);
     }
 }

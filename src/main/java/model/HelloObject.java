@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 /**
  * @author 86132
@@ -14,4 +15,5 @@ import java.io.Serializable;
 public class HelloObject implements Serializable {
     private Integer id;
     private String message;
+    public HelloObject(){}
 }
